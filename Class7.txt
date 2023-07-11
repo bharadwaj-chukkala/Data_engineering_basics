@@ -1,0 +1,116 @@
+Distributed Systems and Databases
+
+What is a Distributed System?
+    - A distributed system is a collection of independent computers that appear to users as a single coherent system.
+    - The independent components can be located in different physical locations on different machines.
+    - The components communicate with each other using a network to achieve a common goal.
+    - The components can be heterogeneous (different hardware and software).
+    - The components are called nodes.
+    - A Distributed Systems will appear as a single system to the user. The hope is that together, the system can
+        maximize the resources available to the user and also provide fault tolerance.
+
+Characteristics of Distributed Systems:
+    - Scalability: The ability to increase the size of the system without affecting the performance of the system.
+    - Concurrency: The ability to execute multiple processes at the same time.
+    - Fault Tolerance: The ability to continue to operate even if some of the components fail.
+    - Transparency: The ability to hide the complexity of the system from the user, allowing users to interact with system
+        as if it were a single computer rather than being concerned with the details of the system.
+    - Heterogenity: The ability to use different hardware and software components in the system, where the components are 
+        asynchronus with different hardware, middleware, and software. This allows the system to be flexible and adaptable to
+        changes in the environment like new hardware and software.
+    - Replication: The ability to replicate data and processes to provide fault tolerance and scalability.
+
+What is horizontal scaling?
+    - This is in contrast to vertical scaling, which is the ability to increase the size of the system by adding more
+        resources to a single node.
+    - Horizontal scaling is more difficult to implement than vertical scaling.
+
+What is Vertical Scaling?
+    - This is in contrast to horizontal scaling, which is the ability to increase the size of the system by adding more
+        nodes to the system.
+    - Vertical scaling is easier to implement than horizontal scaling.
+
+What is Auto Scaling?
+    - This is the ability to automatically scale the system based on the load on the system.
+
+What is IAS (Infrastructure as a Service)?
+    - This is the ability to provide the infrastructure for a distributed system as a service.
+    - This allows the user to focus on the application rather than the infrastructure.
+    - This is also known as cloud computing.
+    - Examples of IAS are Amazon Web Services (AWS), Microsoft Azure, and Google Cloud Platform.
+    - IAS provides the following services:
+        - Compute: This is the ability to provide virtual machines (VMs) as a service.
+        - Storage: This is the ability to provide storage as a service.
+        - Networking: This is the ability to provide networking as a service.
+        - Database: This is the ability to provide database as a service.
+        - Security: This is the ability to provide security as a service.
+        - Analytics: This is the ability to provide analytics as a service.
+        - Management: This is the ability to provide management as a service.
+
+What is Heartbeat Protocol?
+    - This is a protocol that allows nodes to detect the failure of other nodes.
+    - The nodes periodically send a heartbeat message/signal to each other.
+    - If a node does not receive a heartbeat message from another node within a certain time period, it assumes that the
+        other node has failed.
+    - The nodes can then take appropriate action to recover from the failure.
+
+What is Parallel Processing?
+    - This is the ability to execute multiple processes at the same time.
+    - This is also known as concurrency.
+    - This is achieved by using multiple processors.
+    - This is also known as multi-core processing, multi-threading, multi-processing, and multi-tasking.
+
+Distributed Systems Architecture:
+    - The architecture of a distributed system is similar to the architecture of a single computer system.
+    - The architecture of a distributed system consists of the following layers:
+        - Application Layer: This is the top layer of the architecture.
+            - This layer consists of the application programs that the user interacts with.
+            - This layer is also known as the presentation layer.
+        - Middleware Layer: This is the middle layer of the architecture.
+            - This layer provides the communication between the application layer and the
+                database layer.
+            - This layer is also known as the business logic layer.
+        - Database Layer: This is the bottom layer of the architecture.
+            - This layer consists of the database that stores the data.
+            - This layer is also known as the data access layer.
+    - Types:
+        - Three-tier architecture: This is the most common architecture.
+            - This architecture consists of the application layer, the middleware layer, and the database layer.
+        - Two-tier architecture: This is a simplified architecture.
+            - This architecture consists of the application layer and the database layer.
+        - N-tier architecture: This is an extended architecture.
+            - This architecture consists of the application layer, the middleware layer, and multiple database layers.
+        - Peer to Peer: 
+            - 
+    
+Advantages of Distributed Systems:
+    - Unlimited Scalability: The system can be scaled to any size.
+    - Fault Tolerance: Even if one or more nodes fail, the system can continue to operate.
+    - Low Latency: The system can be distributed across multiple locations to reduce the latency.
+
+Disadvantages of Distributed Systems:
+    - Data Integration and Consistency: The data in the system may not be consistent.
+
+What is a Database?
+    - A Database is a collection of data that is organized in such a way that it can be easily accessed, managed, and
+        updated.
+
+What is ETL?
+    - ETL stands for Extract, Transform, and Load.
+    - This is the process of extracting data from a source, transforming the data, and loading the data into a target.
+    - This is also known as data integration.
+    - This is a common process in data warehousing.
+    - Basic steps to implement
+        - Extract: This is the process of extracting data from a source.
+        - Transform: This is the process of transforming the data.
+        - Load: This is the process of loading the data into a target.
+
+What is a Data Warehouse?
+    - A Data Warehouse is a database that is optimized for data analysis.
+    - This is a centralized repository of data that is used to support business intelligence and data mining.
+
+What is a Data Lake?
+    - A Data Lake is a central repository of data that is used to support data analysis.
+
+Who decides which platform to use for a distributed system?
+    - 

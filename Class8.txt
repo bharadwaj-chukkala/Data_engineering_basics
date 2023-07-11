@@ -1,0 +1,81 @@
+HDFS Architecture
+- Hadoop Distributed File System (HDFS) is a distributed file system designed to run on commodity hardware. 
+- It has many similarities with existing distributed file systems. 
+- However, the differences from other distributed file systems are significant. 
+- HDFS is highly fault-tolerant and is designed to be deployed on low-cost hardware. 
+- HDFS provides high throughput access to application data and is suitable for applications that have large data sets.
+
+NameNode: Master Server that contains RAM and Metadata(Name, Replica info, Block info, etc.)
+- The NameNode is a master server that manages the file system namespace and regulates access to files by clients.
+- The NameNode also knows the datanodes that store the blocks of each file.
+- The NameNode is a single point of failure in the system.
+- The NameNode is the only process that can modify the file system namespace.
+
+DataNode/SlaveNode: 
+- The DataNodes are the worker processes that store and retrieve blocks when clients read and write files.
+- The DataNodes perform block creation, deletion, and replication upon instruction from the NameNode.
+- The DataNodes also report to the NameNode periodically to report the state of their local storage.
+
+Secondary NameNode
+- The Secondary NameNode is a backup master server that supports the NameNode in managing the file system namespace.
+- The Secondary NameNode does not store any blocks.
+- The Secondary NameNode periodically merges the namespace edits from the active NameNode into a new checkpoint image.
+- The Secondary NameNode also helps to relieve the pressure on the active NameNode by taking over certain tasks, such as block replication.
+
+Client
+- The HDFS client is any program that accesses HDFS, such as a user application program or a script.
+- The HDFS client interacts with the HDFS file system through a set of interfaces defined in the Hadoop Common package.
+- The HDFS client uses the Hadoop RPC mechanism to communicate with the NameNode and DataNodes.
+
+File System namespace
+- The file system namespace is a directory tree that stores file metadata.
+
+Hadoop Cluster
+- A Hadoop cluster is a collection of computers that work together to solve problems involving massive amounts of data and computation.
+- A Hadoop cluster consists of a single NameNode and multiple DataNodes.
+- The NameNode and DataNodes are processes that run on the computers in the cluster.
+- The NameNode and DataNodes communicate with the HDFS each other using RPC.
+
+HDFS Read and Write Mechanism
+- The HDFS client application reads and writes data to the HDFS file system through the HDFS client library.
+- The HDFS client library interacts with the HDFS file system through a set of interfaces defined in the Hadoop Common package.
+
+Distributed File System
+- A distributed file system is a file system that provides access to shared files on multiple computers so that they appear to be stored on a single computer.
+- A distributed file system is a collection of computers that work together to solve problems involving massive amounts of data and computation.
+
+Parallel Computing
+- Parallel computing is a type of computation in which many calculations or the execution of processes are carried out simultaneously.
+
+What is Round Robin?
+- Round Robin is a scheduling algorithm where each process is assigned a fixed time slot in a cyclic way.
+- Round Robin is simple, easy to implement and starvation-free.
+
+What is YARN?
+- Yet Another Resource Negotiator (YARN) is a cluster resource management system that is responsible for managing resources in a cluster.
+- YARN is a part of the Hadoop 2.x release.
+
+- Fundamental idea of YARN is to split up the functionalities of resource management and job scheduling/monitoring into separate daemons.
+- The idea is to have a global resource manager (responsible for managing resources) and per-application application master (responsible for scheduling and monitoring application).
+
+What is MapReduce?
+- MapReduce is a programming model and an associated implementation for processing and generating large data sets.
+- MapReduce is a software framework for easily writing applications which process vast amounts of data (multi-terabyte data-sets) 
+    in-parallel on large clusters (thousands of nodes) of commodity hardware in a reliable, fault-tolerant manner.
+
+What is Appmaster?
+- Application Master (AM) is a per-application master process that is responsible for resource management and application execution.
+- The AM is responsible for requesting resources from the Resource Manager and monitoring the containers allocated to the application.
+
+What is Resource Manager?
+- Resource Manager (RM) is a global master process that is responsible for resource management and making scheduling decisions.
+- The RM has two main components: scheduler and applications manager.
+
+What is a Scheduler?
+- Scheduler is a component of the Resource Manager that is responsible for allocating containers to applications.
+- The scheduler is responsible for making scheduling decisions, such as which container to allocate to which application.
+
+What is a NodeManager?
+- Node Manager (NM) is a per-node process that is responsible for container management and monitoring.
+- The NM is responsible for launching containers, monitoring resource usage and reaping containers when requested by the RM or the AM.
+

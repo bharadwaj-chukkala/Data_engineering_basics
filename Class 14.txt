@@ -1,0 +1,10 @@
+Hadoop Practicals
+
+
+cmd 0: sudo nano etc/hosts/ (add the ip address of the master node and the slave node) there are some default ip addresses in the file, just add the ip address of the master node and the slave node after the default ip addresses.
+cmd 1: jps (to check if the namenode and the datanode are running, this shows all the running services)
+cmd 2: cd $HADOOP_HOME
+cmd 3: start-all.sh
+cmd 4: stop-all.sh
+
+apache hive - bin.tar.gz
